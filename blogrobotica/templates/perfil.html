@@ -1,0 +1,15 @@
+{% load static %}  <!-- Esto va siempre al principio si vas a usar archivos estáticos -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil del usuario</title>
+</head>
+<body>
+    {% if perfil.avatar %}
+        <img src="{{ perfil.avatar.url }}" alt="Avatar de {{ perfil.usuario.username }}">
+    {% else %}
+        <p>No hay avatar cargado.</p>
+    {% endif %}
+</body>
+</html>

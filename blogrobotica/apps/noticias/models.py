@@ -26,6 +26,13 @@ class Comentario(models.Model):
     def __str__(self):
         return f'{self.usuario.username}-{self.noticia.titulo}'
     
+class Perfil(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE)
+    bio=models.TextField(null=True, blank=True)
+    avatar=models.ImageField(upload_to=True, blank=True, null=True)
+
+    def __str__(self):
+        return f'Perfil de {self.user.username}'    
     
     
     

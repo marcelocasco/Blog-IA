@@ -8,6 +8,8 @@ urlpatterns=[
     path('noticia/<int:id_ing>/', views.detalle_noticia,name='detalle_noticia'),
     path('noticia/crear/', views.crear_noticia,name='crear_noticia'),
     path('noticia/<int:id_ing>/editar/', views.editar_noticia,name='editar_noticia'), 
-    path('noticia/<int:id_ing>/eliminar/', views.eliminar_noticia,name='eliminar_noticia'), 
-    
+    path('noticia/<int:id_ing>/eliminar/', views.eliminar_noticia,name='eliminar_noticia'),
+    path('perfil/crear/', views.crear_perfil, name='crear_perfil'),
+    path('registro/', views.registrar_usuario, name='registrar_usuario'), 
+
 ]
